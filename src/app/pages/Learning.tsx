@@ -56,24 +56,26 @@ export default function Learning() {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="mb-8">
-        <h1 className="text-3xl text-foreground mb-2">학습</h1>
-        <p className="text-muted-foreground">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+      <div className="mb-6 sm:mb-8">
+        <h1 className="text-2xl sm:text-3xl text-foreground mb-2">학습</h1>
+        <p className="text-sm sm:text-base text-muted-foreground">
           실무에 바로 도움 되는 학습 자료와 기술 정리
         </p>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-8">
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
         <div className="flex-1 min-w-0">
-          <div className="grid gap-6">
+          <div className="grid gap-4 sm:gap-6">
             {learningPosts.map((post) => (
               <PostCard key={post.id} {...post} />
             ))}
           </div>
         </div>
 
-        <Sidebar />
+        <div className="lg:block">
+          <Sidebar />
+        </div>
       </div>
     </div>
   );

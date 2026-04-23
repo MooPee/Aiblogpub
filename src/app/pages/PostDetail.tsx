@@ -78,24 +78,24 @@ Spring Boot 3.0은 GraalVM Native Image를 공식 지원합니다.
   ];
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
       <Link
         to="/"
-        className="inline-flex items-center gap-2 text-primary hover:underline mb-8"
+        className="inline-flex items-center gap-2 text-primary hover:underline mb-6 sm:mb-8 text-sm sm:text-base"
       >
         <ArrowLeft className="w-4 h-4" />
         목록으로
       </Link>
 
       <article>
-        <header className="mb-8 pb-8 border-b border-border">
-          <div className="mb-4">
+        <header className="mb-6 sm:mb-8 pb-6 sm:pb-8 border-b border-border">
+          <div className="mb-3 sm:mb-4">
             <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
               {post.category}
             </span>
           </div>
 
-          <h1 className="text-4xl text-foreground mb-6">{post.title}</h1>
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl text-foreground mb-4 sm:mb-6">{post.title}</h1>
 
           <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-4">
             <div className="flex items-center gap-1">
@@ -128,21 +128,21 @@ Spring Boot 3.0은 GraalVM Native Image를 공식 지원합니다.
         </div>
       </article>
 
-      <div className="mt-16 pt-8 border-t border-border">
-        <h3 className="text-xl text-foreground mb-6">관련 글</h3>
-        <div className="grid gap-4">
+      <div className="mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-border">
+        <h3 className="text-lg sm:text-xl text-foreground mb-4 sm:mb-6">관련 글</h3>
+        <div className="grid gap-3 sm:gap-4">
           {relatedPosts.map((relatedPost) => (
             <Link
               key={relatedPost.id}
               to={`/post/${relatedPost.id}`}
-              className="block p-4 bg-card border border-border rounded-lg hover:shadow-md transition-shadow group"
+              className="block p-3 sm:p-4 bg-card border border-border rounded-lg hover:shadow-md transition-shadow group"
             >
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <span className="text-xs text-primary mb-2 block">
+                  <span className="text-xs text-primary mb-1 sm:mb-2 block">
                     {relatedPost.category}
                   </span>
-                  <h4 className="text-foreground group-hover:text-primary transition-colors">
+                  <h4 className="text-sm sm:text-base text-foreground group-hover:text-primary transition-colors">
                     {relatedPost.title}
                   </h4>
                 </div>

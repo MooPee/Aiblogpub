@@ -22,12 +22,12 @@ export default function Header() {
             </span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-12">
             {menuItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className="text-foreground/80 hover:text-primary transition-colors"
+                className="text-foreground/80 hover:text-primary transition-colors text-[15px]"
               >
                 {item.label}
               </Link>

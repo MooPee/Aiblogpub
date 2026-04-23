@@ -23,8 +23,8 @@ export default function FeaturedPost({
   return (
     <Link to={`/post/${id}`} className="block group">
       <div className="bg-card rounded-xl overflow-hidden border border-border shadow-sm hover:shadow-md transition-shadow">
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="h-64 md:h-auto overflow-hidden">
+        <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
+          <div className="h-48 sm:h-64 md:h-auto overflow-hidden">
             <img
               src={imageUrl}
               alt={title}
@@ -32,26 +32,26 @@ export default function FeaturedPost({
             />
           </div>
 
-          <div className="p-6 md:p-8 flex flex-col justify-center">
-            <div className="mb-3">
-              <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
+          <div className="p-5 sm:p-6 md:p-8 flex flex-col justify-center">
+            <div className="mb-2 sm:mb-3">
+              <span className="inline-block px-2.5 sm:px-3 py-1 bg-primary/10 text-primary rounded-full text-xs sm:text-sm">
                 {category}
               </span>
             </div>
 
-            <h2 className="text-3xl text-foreground mb-4 group-hover:text-primary transition-colors">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl text-foreground mb-3 sm:mb-4 group-hover:text-primary transition-colors">
               {title}
             </h2>
 
-            <p className="text-foreground/70 mb-4 line-clamp-3">{summary}</p>
+            <p className="text-sm sm:text-base text-foreground/70 mb-3 sm:mb-4 line-clamp-2 sm:line-clamp-3">{summary}</p>
 
-            <div className="flex items-center gap-4 text-sm text-muted-foreground">
+            <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-sm text-muted-foreground">
               <div className="flex items-center gap-1">
-                <Calendar className="w-4 h-4" />
+                <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 <span>{date}</span>
               </div>
               <div className="flex items-center gap-1">
-                <Clock className="w-4 h-4" />
+                <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 <span>{readTime}</span>
               </div>
             </div>

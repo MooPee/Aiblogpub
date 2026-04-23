@@ -79,25 +79,27 @@ export default function Home() {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="mb-12">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+      <div className="mb-8 sm:mb-12">
         <FeaturedPost {...featuredPost} />
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-8">
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
         <div className="flex-1 min-w-0">
-          <div className="mb-6">
-            <h2 className="text-2xl text-foreground">최신 글</h2>
+          <div className="mb-4 sm:mb-6">
+            <h2 className="text-xl sm:text-2xl text-foreground">최신 글</h2>
           </div>
 
-          <div className="grid gap-6">
+          <div className="grid gap-4 sm:gap-6">
             {recentPosts.map((post) => (
               <PostCard key={post.id} {...post} />
             ))}
           </div>
         </div>
 
-        <Sidebar />
+        <div className="lg:block">
+          <Sidebar />
+        </div>
       </div>
     </div>
   );

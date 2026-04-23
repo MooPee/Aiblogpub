@@ -18,20 +18,20 @@ export default function Sidebar() {
 
   return (
     <aside className="w-full lg:w-80 flex-shrink-0">
-      <div className="sticky top-20 space-y-6">
-        <div className="bg-card rounded-lg p-6 border border-border shadow-sm">
-          <div className="text-center mb-4">
-            <div className="w-20 h-20 bg-primary/10 rounded-full mx-auto mb-3 flex items-center justify-center">
-              <span className="text-3xl text-primary" style={{ fontWeight: 700 }}>
+      <div className="sticky top-20 space-y-4 sm:space-y-6">
+        <div className="bg-card rounded-lg p-5 sm:p-6 border border-border shadow-sm">
+          <div className="text-center mb-3 sm:mb-4">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-primary/10 rounded-full mx-auto mb-2 sm:mb-3 flex items-center justify-center">
+              <span className="text-2xl sm:text-3xl text-primary" style={{ fontWeight: 700 }}>
                 D
               </span>
             </div>
-            <h3 className="text-foreground mb-1">개발자 이름</h3>
-            <p className="text-sm text-muted-foreground">
+            <h3 className="text-base sm:text-lg text-foreground mb-1">개발자 이름</h3>
+            <p className="text-xs sm:text-sm text-muted-foreground">
               Backend Developer
             </p>
           </div>
-          <p className="text-sm text-foreground/70 mb-4 text-center">
+          <p className="text-xs sm:text-sm text-foreground/70 mb-3 sm:mb-4 text-center">
             Java/Spring 기반 백엔드 개발자입니다. 실무 경험과 학습 내용을 정리합니다.
           </p>
           <div className="flex justify-center gap-3">
@@ -52,8 +52,8 @@ export default function Sidebar() {
           </div>
         </div>
 
-        <div className="bg-card rounded-lg p-6 border border-border shadow-sm">
-          <h3 className="text-foreground mb-4">카테고리</h3>
+        <div className="bg-card rounded-lg p-5 sm:p-6 border border-border shadow-sm">
+          <h3 className="text-base sm:text-lg text-foreground mb-3 sm:mb-4">카테고리</h3>
           <div className="space-y-2">
             {categories.map((category) => (
               <Link
@@ -72,20 +72,20 @@ export default function Sidebar() {
           </div>
         </div>
 
-        <div className="bg-card rounded-lg p-6 border border-border shadow-sm">
-          <h3 className="text-foreground mb-4">인기 글</h3>
-          <div className="space-y-3">
+        <div className="bg-card rounded-lg p-5 sm:p-6 border border-border shadow-sm">
+          <h3 className="text-base sm:text-lg text-foreground mb-3 sm:mb-4">인기 글</h3>
+          <div className="space-y-2.5 sm:space-y-3">
             {popularPosts.map((post, index) => (
               <Link
                 key={post.id}
                 to={`/post/${post.id}`}
                 className="block group"
               >
-                <div className="flex gap-3">
-                  <span className="text-primary" style={{ fontWeight: 700 }}>
+                <div className="flex gap-2 sm:gap-3">
+                  <span className="text-sm sm:text-base text-primary" style={{ fontWeight: 700 }}>
                     {index + 1}
                   </span>
-                  <span className="text-sm text-foreground/80 group-hover:text-primary transition-colors line-clamp-2">
+                  <span className="text-xs sm:text-sm text-foreground/80 group-hover:text-primary transition-colors line-clamp-2">
                     {post.title}
                   </span>
                 </div>
