@@ -1,4 +1,5 @@
-import { Github, Mail } from "lucide-react";
+import { Link } from "react-router";
+import { Github, Mail, User } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -15,6 +16,13 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-4">
+            <Link
+              to="/about"
+              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              <User className="w-4 h-4" />
+              소개
+            </Link>
             <a
               href="https://github.com"
               target="_blank"
