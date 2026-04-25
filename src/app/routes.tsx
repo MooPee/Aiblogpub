@@ -8,6 +8,7 @@ import Learning from "./pages/Learning";
 import AdminRoot from "./pages/admin/AdminRoot";
 import Dashboard from "./pages/admin/Dashboard";
 import PostList from "./pages/admin/PostList";
+import PostEdit from "./pages/admin/PostEdit";
 import ScrapList from "./pages/admin/ScrapList";
 import LearningList from "./pages/admin/LearningList";
 import Settings from "./pages/admin/Settings";
@@ -30,6 +31,8 @@ export const router = createBrowserRouter([
     children: [
       { index: true, Component: Dashboard },
       { path: "posts", Component: PostList },
+      { path: "posts/new", Component: PostEdit },
+      { path: "posts/:id/edit", Component: PostEdit },
       { path: "scraps", Component: ScrapList },
       { path: "learning", Component: LearningList },
       { path: "settings", Component: Settings },
