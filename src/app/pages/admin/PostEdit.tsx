@@ -130,16 +130,6 @@ export default function PostEdit() {
           <div className="space-y-4">
             <div>
               <label className="block text-sm text-foreground mb-2">
-                상태
-              </label>
-              <select className="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50">
-                <option value="draft">임시저장</option>
-                <option value="published">발행</option>
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-sm text-foreground mb-2">
                 읽는 시간 (분)
               </label>
               <input
@@ -171,17 +161,11 @@ export default function PostEdit() {
             취소
           </Link>
           <button
-            type="button"
-            className="px-6 py-2.5 border border-border rounded-lg hover:bg-secondary transition-colors"
-          >
-            임시저장
-          </button>
-          <button
             type="submit"
             className="flex items-center justify-center gap-2 px-6 py-2.5 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
           >
             <Save className="w-4 h-4" />
-            발행하기
+            저장
           </button>
         </div>
       </form>
